@@ -1,4 +1,3 @@
-import type { NextPage } from "next";
 import { IPost } from "../../data"
 import Head from 'next/head'
 import Link from 'next/link'

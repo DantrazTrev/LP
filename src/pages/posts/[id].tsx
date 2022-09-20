@@ -19,7 +19,7 @@ export async function getStaticProps({ params }: StaticProps) {
     const comments = await commentres.json()
     const date = new Date().toLocaleString()
     return {
-        props: { post, comments, date }, revalidate: 100
+        props: { post, comments, date }, revalidate: 100,
     }
 }
 

@@ -3,9 +3,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { createRouter, expressWrapper } from 'next-connect';
 import cors from 'cors';
 
-// Default Req and Res are IncomingMessage and ServerResponse
-// You may want to pass in NextApiRequest and NextApiResponse
-
 type Data = {
   name: string;
 };
