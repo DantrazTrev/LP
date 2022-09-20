@@ -13,7 +13,7 @@ const router = createRouter<
   NextApiResponse<RevalidResp | ErrorRep>
 >();
 router.use(expressWrapper(cors())).post(async (req, res) => {
-  const { path } = await req.body.json();
+  const { path } = await JSON.parse(req.body);
 
   try {
     await res.revalidate(path);
