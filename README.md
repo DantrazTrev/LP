@@ -1,3 +1,7 @@
+## Deploy to Google Cloud Run
+
+[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
+
 # Create T3 App
 
 This is an app bootstrapped according to the [init.tips](https://init.tips) stack, also known as the T3-Stack.
@@ -191,18 +195,18 @@ You can also use docker compose to build the image and run the container.
    <summary>docker-compose.yml</summary>
 
    ```yaml
-   version: "3.9"
+   version: '3.9'
    services:
      app:
-       platform: "linux/amd64"
+       platform: 'linux/amd64'
        build:
          context: .
          dockerfile: Dockerfile
          args:
-           NEXT_PUBLIC_CLIENTVAR: "clientvar"
+           NEXT_PUBLIC_CLIENTVAR: 'clientvar'
        working_dir: /app
        ports:
-         - "3000:3000"
+         - '3000:3000'
        image: t3-app
        environment:
          - DATABASE_URL=database_url_goes_here
